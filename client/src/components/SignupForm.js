@@ -1,21 +1,25 @@
-import React, { useEffect,useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import React, { useState, useEffect } from "react";
+import { Form, Button, Alert } from "react-bootstrap";
 
-import { ADD_USER } from '../utils/mutations';
-import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth';
+// import appolo hook and add user mutation
+import { useMutation } from "@apollo/react-hooks";
+import { ADD_USER } from "../utils/mutations";
 
+import Auth from "../utils/auth";
 
 const SignupForm = () => {
   // set initial form state
-  const [userFormData, setUserFormData] = useState({ 
-    username: '',
-   email: '',
-    password: '' });
+  const [userFormData, setUserFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
+
+  // declared the addUser with the useMutation
   const [addUser, { error }] = useMutation(ADD_USER);
 
   useEffect(() => {
@@ -41,20 +45,21 @@ const SignupForm = () => {
       event.stopPropagation();
     }
 
+    // use addUser function
     try {
-      const {data} = await addUser({ variables: { ...userFormData }, });
+      const { data } = await addUser({
+        variables: { ...userFormData },
+      });
 
       Auth.login(data.addUser.token);
-    
-    } catch (err) {
-      console.error(err);
-      // setShowAlert(true);
+    } catch (e) {
+      console.error(e);
     }
-    
+
     setUserFormData({
-      username: '',
-      email: '',
-      password: '',
+      username: "",
+      email: "",
+      password: "",
     });
   };
 
@@ -72,7 +77,7 @@ const SignupForm = () => {
           Something went wrong with your signup!
         </Alert>
 
-        <Form.Group className="mb-3">
+        <Form.Group>
           <Form.Label htmlFor="username">Username</Form.Label>
           <Form.Control
             type="text"
@@ -87,7 +92,7 @@ const SignupForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group>
           <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
             type="email"
@@ -102,7 +107,7 @@ const SignupForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group>
           <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
             type="password"
@@ -127,7 +132,7 @@ const SignupForm = () => {
           type="submit"
           variant="success"
         >
-          Sign Up
+          Submit
         </Button>
       </Form>
     </>

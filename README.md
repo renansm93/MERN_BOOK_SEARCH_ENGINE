@@ -2,15 +2,16 @@
 
 ## Description
 
-"Book Search Engine " is a powerful web application that allows users to explore and discover a vast collection of books using GraphQL and React. Leveraging the Google Books API, users can search for books by title, author, or keywords and access detailed information, including book covers, descriptions, and publication details. With an intuitive user interface and real-time updates, this book search engine provides an efficient and seamless browsing experience. Whether you are an avid reader or a casual book enthusiast, this application is the ideal tool to explore the literary world with ease and efficiency.
+A React-based Google Books Search that displays books on user searches. Search for books using the Google Books API by typing in a title and clicking on "Search". The user can view the book which will bring them to the page on Google Books by clicking "View" in the results for the search. Click "Save" to save the book to the database.
+
+This application allows users to search for new books from Google's Book API. Users can log in to save the book they would like to purchase, as well as to remove the books from their library.
 
 
-
-![Google Book Search]()
+![Google Book Search](https://github.com/Amritpal-Kaur0/Book-Search-Engine/assets/128442182/c0968693-4784-4c1c-af96-172dbf6352d5)
 
 
 ## Deployed link 
-[Link]()
+[Link]( https://google-books123-32524f080868.herokuapp.com/)
 
 ## License 
 This project is licensed under the MIT license. For more information about the license, go to [License](https://choosealicense.com/licenses/mit/).

@@ -7,7 +7,7 @@ A React-based Google Books Search that displays books on user searches. Search f
 This application allows users to search for new books from Google's Book API. Users can log in to save the book they would like to purchase, as well as to remove the books from their library.
 
 
-![Google Book Search]()
+<img src="client/google-books123-32524f080868.herokuapp.com_ (1).png" widht=300 height=700 alt="Screenshot of the website">
 
 
 ## Deployed link 

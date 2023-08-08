@@ -9,7 +9,9 @@ This application allows users to search for new books from Google's Book API. Us
 
 <img src="client/google-books123-32524f080868.herokuapp.com_ (1).png" widht=300 height=400 alt="Screenshot of the website">
 
-<img src="google-books123-32524f080868.herokuapp.com_ (2).png" widht=300 height=400 alt="Screenshot of the website">
+<img src="client/google-books123-32524f080868.herokuapp.com_ (2).png" widht=300 height=400 alt="Screenshot of the website">
+
+<img src="client/google-books123-32524f080868.herokuapp.com_saved.png" widht=300 height=400 alt="Screenshot of the website">
 
 
 ## Deployed link 
